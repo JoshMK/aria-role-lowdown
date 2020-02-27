@@ -6,6 +6,28 @@
 - If you're using semantic HTML4 elements you shouldn't need to put aria roles on them except in some browser-specific edge cases.
 - If you're using semantic HTML5 elements sometimes you'll need to put aria roles on them depending on browser/VO support for the element.
 
+## role="alertdialog"
+
+What it does: alerts screenreaders that an input error has occured
+
+Use it when: you're using a modal-esque, input trapped container to accoune errors.
+
+### role="alertdialog" example
+
+```
+<div role="alertdialog" aria-labelledby="alertHeading" aria-describedby="alertText">
+<h1 id="alertHeading">Error</h1>
+<div id="alertText">Employee's Birth Date is after their hire date. Please verify the birth date and hire date.</div>
+<button>Save and Continue</button>
+<button>Return to page and correct error</button>
+</div>
+```
+
+### References:
+
+- [https://www.w3.org/TR/WCAG20-TECHS/ARIA18.html]
+- [https://www.w3.org/WAI/WCAG20/Techniques/working-examples/ARIA18/aria-role-alertdialog.html]
+
 ## role="figure"
 
 What it does: identifies a semantic figure element.
